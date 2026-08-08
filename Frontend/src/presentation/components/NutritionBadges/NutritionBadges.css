@@ -1,0 +1,47 @@
+.nutrition-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  margin-top: 24px;
+  background: rgba(24, 24, 27, 0.8);
+  border: 1px solid var(--bg-card-border);
+}
+
+.nutrition-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nutrition-card:last-child {
+  border-right: none;
+}
+
+.nutri-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.icon-calories { color: #ffaa00; }
+.icon-fat { color: #ff5500; }
+.icon-protein { color: var(--accent); }
+
+.nutri-value {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--text-main);
+}
+
+.nutri-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}

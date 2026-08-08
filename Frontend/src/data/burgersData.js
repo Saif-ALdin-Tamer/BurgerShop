@@ -1,0 +1,217 @@
+import { Burger } from '../core/entities/Burger';
+
+export const INITIAL_BURGERS = [
+  // --- NEW USER TRANSPARENT SELECTION (5 NEW ITEMS) ---
+  new Burger({
+    id: 'burger-new-1',
+    name: 'Double Flame Angus Splash',
+    tagline: 'New Special',
+    description: 'Double flame-grilled Angus patties layered with melted cheddar cheese, crispy bacon, pickles, red onions, fresh lettuce, and signature splash sauce.',
+    price: 15.99,
+    spiceLevel: 3,
+    ingredients: ['Double Angus Patties', 'Aged Cheddar', 'Crispy Bacon', 'Pickles & Red Onions', 'Sesame Bun'],
+    nutrition: { calories: '890 kcal', fat: '44g', protein: '48g', carbs: '52g' },
+    image: '/enhancedBurgerPhoto/burger-double-angus-transparent.png',
+    category: 'Beef',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'burger-new-2',
+    name: 'Crispy Fried Chicken Splash',
+    tagline: 'New Favorite',
+    description: 'Golden double buttermilk fried chicken breast overflowing with melting cheese splash, crunchy pickles, juicy tomatoes, and zesty mayo.',
+    price: 13.99,
+    spiceLevel: 2,
+    ingredients: ['Buttermilk Fried Chicken', 'Melting Cheese Splash', 'Dill Pickles', 'Fresh Tomatoes', 'Zesty Mayo'],
+    nutrition: { calories: '760 kcal', fat: '34g', protein: '42g', carbs: '54g' },
+    image: '/enhancedBurgerPhoto/burger-crispy-chicken-transparent.png',
+    category: 'Chicken',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'burger-new-3',
+    name: 'Smokey BBQ Bacon & Rings',
+    tagline: 'Hot & Spicy',
+    description: 'Flame-grilled prime Angus patty topped with beer-battered onion rings, flying hickory smoked bacon, melted Swiss, and smoky BBQ sauce.',
+    price: 14.99,
+    spiceLevel: 4,
+    ingredients: ['Prime Angus Patty', 'Beer-Battered Onion Rings', 'Hickory Bacon', 'Melted Swiss', 'Smoky BBQ Sauce'],
+    nutrition: { calories: '910 kcal', fat: '46g', protein: '50g', carbs: '58g' },
+    image: '/enhancedBurgerPhoto/burger-bbq-bacon-transparent.png',
+    category: 'Beef',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'burger-new-4',
+    name: 'Avocado Chicken Deluxe',
+    tagline: 'Fresh Choice',
+    description: 'Grilled seasoned chicken breast topped with fresh sliced avocado, crispy bacon, microgreens, tomatoes, red onions, and house aioli.',
+    price: 12.99,
+    spiceLevel: 1,
+    ingredients: ['Grilled Chicken Breast', 'Fresh Sliced Avocado', 'Crispy Bacon', 'Organic Microgreens', 'House Aioli'],
+    nutrition: { calories: '680 kcal', fat: '28g', protein: '44g', carbs: '46g' },
+    image: '/enhancedBurgerPhoto/burger-avocado-chicken-transparent.png',
+    category: 'Chicken',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'burger-new-5',
+    name: 'Double BBQ Bacon Splash',
+    tagline: 'Gourmet Special',
+    description: 'Juicy Angus patty topped with thick-cut crispy bacon weaves, rich barbecue glaze, melted cheddar, lettuce, and tomatoes on an artisan brioche bun.',
+    price: 13.50,
+    spiceLevel: 2,
+    ingredients: ['Angus Beef Patty', 'Thick Hickory Bacon', 'BBQ Glaze', 'Melted Cheddar', 'Artisan Brioche'],
+    nutrition: { calories: '840 kcal', fat: '40g', protein: '46g', carbs: '48g' },
+    image: '/enhancedBurgerPhoto/burger-double-flame-bbq-transparent.png',
+    category: 'Beef',
+    isPopular: false
+  }),
+
+  // --- ORIGINAL CLASSIC SELECTION ---
+  new Burger({
+    id: 'burger-splash-1',
+    name: 'The Cheese Splash Monster',
+    tagline: 'Splash Special',
+    description: 'Ultra-juicy double beef patties dripping in explosive melted cheese splash, fresh garden lettuce, red onion rings, pickled tomatoes on a toasted sesame bun.',
+    price: 15.99,
+    spiceLevel: 3,
+    ingredients: ['Double Angus Beef', 'Explosive Cheese Splash', 'Red Onion Rings', 'Garden Lettuce', 'Toasted Sesame Bun'],
+    nutrition: { calories: '890 kcal', fat: '44g', protein: '48g', carbs: '52g' },
+    image: '/enhancedBurgerPhoto/BeffBurger.png',
+    category: 'Beef',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'burger-splash-2',
+    name: 'Double Bacon Splash',
+    tagline: 'Trending Deal',
+    description: 'Double flame-grilled Angus patties layered with crispy hickory smoked bacon weaves, dripping cheddar cheese, and smoky BBQ aioli.',
+    price: 14.99,
+    spiceLevel: 2,
+    ingredients: ['Double Angus Patties', 'Crispy Bacon Weaves', 'Melted Cheddar', 'Smoky BBQ Aioli', 'Brioche Bun'],
+    nutrition: { calories: '860 kcal', fat: '42g', protein: '45g', carbs: '49g' },
+    image: '/enhancedBurgerPhoto/Beef With inon rings .png',
+    category: 'Beef',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'burger-splash-3',
+    name: 'Melted Cheese Drip Monster',
+    tagline: 'Chef Favorite',
+    description: 'Overloaded overflowing melted cheese waterfall over double flame-grilled patties, fresh microgreens, pickled red onions, and house relish.',
+    price: 14.50,
+    spiceLevel: 2,
+    ingredients: ['Double Flame Patties', 'Melted Cheese Waterfall', 'Microgreens', 'Pickled Red Onions', 'House Relish'],
+    nutrition: { calories: '820 kcal', fat: '40g', protein: '46g', carbs: '48g' },
+    image: '/enhancedBurgerPhoto/melted-cheese-drip-transparent.png',
+    category: 'Beef',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'burger-1',
+    name: 'The Double Decker Classic',
+    tagline: 'Classic',
+    description: 'Double juicy grass-fed beef patty with melted cheddar, crisp lettuce, secret house sauce on a freshly baked toasted brioche bun.',
+    price: 12.50,
+    spiceLevel: 3,
+    ingredients: ['100% Angus Beef', 'Double Aged Cheddar', 'Pickled Jalapeños', 'Secret Sauce', 'Artisan Brioche'],
+    nutrition: { calories: '780 kcal', fat: '34g', protein: '45g', carbs: '48g' },
+    image: '/photos/cheeseburger-transparent.png',
+    category: 'Beef',
+    isPopular: false
+  }),
+  new Burger({
+    id: 'burger-2',
+    name: 'Crispy Zesty Chicken Classic',
+    tagline: 'Classic Choice',
+    description: 'Ultra crispy buttermilk fried chicken breast topped with creamy chipotle slaw, crunchy pickles, and zesty mayo.',
+    price: 10.99,
+    spiceLevel: 2,
+    ingredients: ['Buttermilk Chicken', 'Chipotle Slaw', 'Smoky Aioli', 'Dill Pickles', 'Sesame Bun'],
+    nutrition: { calories: '650 kcal', fat: '28g', protein: '38g', carbs: '52g' },
+    image: '/photos/chicken-burger-isolated-transparent.png',
+    category: 'Chicken',
+    isPopular: false
+  }),
+  new Burger({
+    id: 'burger-3',
+    name: 'Smokey BBQ Bacon Classic',
+    tagline: 'Classic BBQ',
+    description: 'Flame-grilled Angus patty layered with crispy hickory smoked bacon, onion rings, tangy BBQ drizzle, and double pepper jack cheese.',
+    price: 13.99,
+    spiceLevel: 4,
+    ingredients: ['Prime Angus Patty', 'Hickory Bacon', 'Beer-Battered Onion Rings', 'Smoky BBQ Sauce', 'Pepper Jack'],
+    nutrition: { calories: '890 kcal', fat: '42g', protein: '48g', carbs: '58g' },
+    image: '/photos/bbq-bacon-isolated-transparent.png',
+    category: 'Beef',
+    isPopular: false
+  }),
+  new Burger({
+    id: 'burger-4',
+    name: 'Garden Avocado Veggie',
+    tagline: 'Healthy Option',
+    description: 'Handcrafted plant-based quinoa & black bean patty, sliced fresh avocado, organic microgreens, vegan aioli on a whole grain bun.',
+    price: 11.50,
+    spiceLevel: 1,
+    ingredients: ['Black Bean Quinoa Patty', 'Fresh Avocado', 'Microgreens', 'Sundried Tomato Aioli', 'Whole Grain Bun'],
+    nutrition: { calories: '520 kcal', fat: '18g', protein: '22g', carbs: '62g' },
+    image: '/enhancedBurgerPhoto/burger-avocado-chicken-transparent.png',
+    category: 'Veggie',
+    isPopular: false
+  }),
+
+  // --- DRINKS ---
+  new Burger({
+    id: 'drink-1',
+    name: 'Classic Ice Cold Cola',
+    tagline: 'Refreshment',
+    description: 'Vintage ice-cold fountain Coca-Cola served in a chilled glass with crushed ice and fresh lemon zest.',
+    price: 3.50,
+    spiceLevel: 1,
+    ingredients: ['Classic Cola', 'Crushed Ice', 'Lemon Slice'],
+    nutrition: { calories: '150 kcal', fat: '0g', protein: '0g', carbs: '38g' },
+    image: '/photos/cola-isolated-transparent.png',
+    category: 'Drinks',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'drink-2',
+    name: 'Craft Strawberry Milkshake',
+    tagline: 'Sweet Treat',
+    description: 'Hand-spun artisanal strawberry ice cream shake topped with fresh whipped cream and a cherry.',
+    price: 5.50,
+    spiceLevel: 1,
+    ingredients: ['Organic Strawberries', 'Whole Milk Ice Cream', 'Whipped Cream', 'Maraschino Cherry'],
+    nutrition: { calories: '420 kcal', fat: '16g', protein: '0g', carbs: '58g' },
+    image: '/photos/milkshake-isolated-transparent.png',
+    category: 'Drinks',
+    isPopular: true
+  }),
+  new Burger({
+    id: 'drink-3',
+    name: 'Sparkling Citrus Lemonade',
+    tagline: 'Fresh Squeezed',
+    description: 'Hand-pressed Meyer lemons blended with cane sugar syrup, sparkling soda water, and fresh mint leaves.',
+    price: 4.25,
+    spiceLevel: 1,
+    ingredients: ['Fresh Meyer Lemon', 'Mint Leaves', 'Sparkling Soda Water', 'Cane Sugar'],
+    nutrition: { calories: '120 kcal', fat: '0g', protein: '0g', carbs: '30g' },
+    image: '/photos/lemonade-isolated-transparent.png',
+    category: 'Drinks',
+    isPopular: false
+  }),
+  new Burger({
+    id: 'drink-4',
+    name: 'Iced Vanilla Bean Latte',
+    tagline: 'Espresso Bar',
+    description: 'Double shot of artisan espresso poured over cold whole milk, Madagascar vanilla syrup, and crystal ice.',
+    price: 4.99,
+    spiceLevel: 1,
+    ingredients: ['Artisan Espresso', 'Madagascar Vanilla', 'Whole Milk', 'Crystal Ice'],
+    nutrition: { calories: '180 kcal', fat: '5g', protein: '6g', carbs: '26g' },
+    image: '/photos/latte-isolated-transparent.png',
+    category: 'Drinks',
+    isPopular: false
+  })
+];

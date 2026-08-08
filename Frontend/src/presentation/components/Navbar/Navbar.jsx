@@ -1,0 +1,94 @@
+import React, { useState } from 'react';
+import { ShoppingBag, MapPin, ChevronDown, Phone } from 'lucide-react';
+import { useCart } from '../../context/CartContext';
+import { LOCATIONS_DATA } from '../../../data/locationsData';
+import './Navbar.css';
+
+export const Navbar = () => {
+  const { totalCount, setIsCartOpen } = useCart();
+  const [selectedLocation, setSelectedLocation] = useState(LOCATIONS_DATA[0]);
+  const [isCityDropdownOpen, setIsCityDropdownOpen] = useState(false);
+
+  return (
+    <header className="navbar-header">
+      <div className="navbar-container glass-panel">
+        {/* Brand / Logo */}
+        <div className="navbar-logo">
+          <svg
+            className="custom-burger-logo-icon"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {/* Top Bun Dome */}
+            <path d="M4 10C4 6.134 7.134 3 11 3H13C16.866 3 20 6.134 20 10V10.5H4V10Z" />
+            {/* Cheese Line & Triangle Fold */}
+            <path d="M3 13.5H21" />
+            <path d="M8 13.5L12 17.5L16 13.5" />
+            {/* Bottom Bun */}
+            <rect x="3" y="18" width="18" height="3.5" rx="1.75" />
+          </svg>
+
+          <div className="logo-text">
+            <span className="logo-title">BURGER</span>
+            <span className="logo-sub">CRAFT & CO.</span>
+          </div>
+        </div>
+
+        {/* Links */}
+        <nav className="navbar-links">
+          <a href="#hero" className="nav-link active">Home</a>
+          <a href="#menu" className="nav-link">Shop Menu</a>
+          <a href="#offers" className="nav-link">Special Offers</a>
+        </nav>
+
+        {/* Action Buttons */}
+        <div className="navbar-actions">
+          {/* Contact Info & Location */}
+          <div className="info-badge">
+            <div className="phone-line">
+              <Phone size={14} />
+              <span>{selectedLocation.phone}</span>
+            </div>
+            
+            <div className="city-selector" onClick={() => setIsCityDropdownOpen(!isCityDropdownOpen)}>
+              <MapPin size={14} className="pin-icon" />
+              <span>{selectedLocation.city}</span>
+              <ChevronDown size={14} className={`arrow-icon ${isCityDropdownOpen ? 'open' : ''}`} />
+
+              {isCityDropdownOpen && (
+                <ul className="city-dropdown glass-panel">
+                  {LOCATIONS_DATA.map((loc) => (
+                    <li
+                      key={loc.id}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedLocation(loc);
+                        setIsCityDropdownOpen(false);
+                      }}
+                      className={selectedLocation.id === loc.id ? 'active' : ''}
+                    >
+                      <div className="dropdown-city-name">{loc.city}</div>
+                      <div className="dropdown-city-sub">{loc.state || loc.country}</div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+
+          {/* Cart Icon Trigger */}
+          <button className="cart-trigger-btn" onClick={() => setIsCartOpen(true)}>
+            <ShoppingBag size={20} />
+            {totalCount > 0 && <span className="cart-badge">{totalCount}</span>}
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};

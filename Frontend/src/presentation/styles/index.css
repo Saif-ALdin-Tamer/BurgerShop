@@ -1,0 +1,113 @@
+:root {
+  --primary: #ff5500;
+  --primary-hover: #e04b00;
+  --primary-glow: rgba(255, 85, 0, 0.55);
+  --accent: #ff8800;
+  --accent-glow: rgba(255, 136, 0, 0.45);
+  --secondary: #ff2200;
+  --bg-dark: #09090b;
+  --bg-card: rgba(24, 24, 27, 0.88);
+  --bg-card-border: rgba(255, 119, 0, 0.22);
+  --text-main: #fafafa;
+  --text-muted: #a1a1aa;
+  --text-dark: #09090b;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 17px; /* Increased scale base */
+  zoom: 1.12; /* Zoom in 2 degrees */
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  font-family: var(--font-body);
+  background-image: 
+    radial-gradient(circle at 20% 15%, rgba(255, 85, 0, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 80% 65%, rgba(255, 136, 0, 0.16) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: var(--transition-smooth);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Amber Terminal Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 85, 0, 0.35);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  box-shadow: 0 0 12px var(--primary);
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 14px 36px 0 rgba(0, 0, 0, 0.65);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseAmberGlow {
+  0%, 100% { box-shadow: 0 0 15px var(--primary-glow); }
+  50% { box-shadow: 0 0 35px rgba(255, 85, 0, 0.85); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
