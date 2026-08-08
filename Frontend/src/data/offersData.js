@@ -9,8 +9,8 @@ export const OFFERS_DATA = [
     promoCode: 'DOUBLE50',
     dealPrice: 18.75,
     originalPrice: 25.00,
-    image: '/enhancedBurgerPhoto/flame-grilled-angus-transparent.png',
-    burgerId: 'burger-splash-2',
+    image: '/enhancedBurgerPhoto/burger-double-angus-transparent.png',
+    burgerId: 'burger-7',
     expiresIn: 'Ends in 4 hours'
   }),
   new Offer({
@@ -22,7 +22,7 @@ export const OFFERS_DATA = [
     dealPrice: 14.99,
     originalPrice: 20.49,
     image: '/enhancedBurgerPhoto/melted-cheese-drip-transparent.png',
-    burgerId: 'burger-splash-3',
+    burgerId: 'burger-8',
     expiresIn: 'Today Only'
   }),
   new Offer({
@@ -34,7 +34,7 @@ export const OFFERS_DATA = [
     dealPrice: 15.99,
     originalPrice: 20.00,
     image: '/enhancedBurgerPhoto/double-splash-transparent.png',
-    burgerId: 'burger-splash-1',
+    burgerId: 'burger-6',
     expiresIn: 'Limited Stock'
   }),
   new Offer({
@@ -45,8 +45,8 @@ export const OFFERS_DATA = [
     promoCode: 'FAMILYFIESTA',
     dealPrice: 39.99,
     originalPrice: 56.00,
-    image: '/enhancedBurgerPhoto/flame-grilled-angus-transparent.png',
-    burgerId: 'burger-1',
+    image: '/enhancedBurgerPhoto/burger-double-angus-transparent.png',
+    burgerId: 'burger-9',
     expiresIn: 'Weekend Special'
   })
 ];

@@ -67,7 +67,7 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
                 {activeBurger.spiceLevel === 1 && 'Mild'}
                 {activeBurger.spiceLevel === 2 && 'Medium'}
                 {activeBurger.spiceLevel === 3 && 'Spicy'}
-                {activeBurger.spiceLevel === 4 && 'Extra Hot 🔥'}
+                {activeBurger.spiceLevel >= 4 && 'Extra Hot 🔥'}
               </span>
             </div>
           )}
@@ -130,7 +130,15 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
                   className={`stage-item ${stageClass}`}
                   onClick={() => setActiveIndex(idx)}
                 >
-                  <img src={b.image} alt={b.name} className="burger-image" />
+                  <img 
+                    src={b.image} 
+                    alt={b.name} 
+                    className="burger-image" 
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/photos/cheese-splash-monster-transparent.png';
+                    }}
+                  />
                 </div>
               );
             })}

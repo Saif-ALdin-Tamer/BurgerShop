@@ -36,7 +36,15 @@ export const OrderModal = () => {
         <div className="modal-body">
           {/* Burger Image Stage */}
           <div className="modal-img-stage">
-            <img src={burger.image} alt={burger.name} className="modal-burger-img" />
+            <img 
+              src={burger.image} 
+              alt={burger.name} 
+              className="modal-burger-img" 
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = '/photos/cheese-splash-monster-transparent.png';
+              }}
+            />
           </div>
 
           {/* Details & Customizations */}

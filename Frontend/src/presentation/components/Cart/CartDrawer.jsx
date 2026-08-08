@@ -133,7 +133,15 @@ export const CartDrawer = () => {
             <div className="cart-items-list">
               {cartItems.map((item, idx) => (
                 <div key={idx} className="cart-item-row">
-                  <img src={item.burger.image} alt={item.burger.name} className="cart-item-img" />
+                  <img 
+                    src={item.burger.image} 
+                    alt={item.burger.name} 
+                    className="cart-item-img" 
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/photos/cheese-splash-monster-transparent.png';
+                    }}
+                  />
                   
                   <div className="cart-item-details">
                     <h4 className="cart-item-name">{item.burger.name}</h4>

@@ -39,7 +39,15 @@ export const MenuGrid = ({ filteredBurgers, activeCategory, setActiveCategory })
 
               {/* Image Container */}
               <div className="card-image-wrap" onClick={() => setSelectedBurgerForModal(item)}>
-                <img src={item.image} alt={item.name} className="card-image" />
+                <img 
+                  src={item.image} 
+                  alt={item.name} 
+                  className="card-image" 
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = '/photos/cheese-splash-monster-transparent.png';
+                  }}
+                />
                 <div className="card-overlay">
                   <button className="preview-btn">
                     <Eye size={18} />

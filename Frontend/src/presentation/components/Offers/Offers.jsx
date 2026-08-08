@@ -47,7 +47,15 @@ export const Offers = () => {
               <div className="offer-card-body">
                 {/* Image */}
                 <div className="offer-img-wrap">
-                  <img src={offer.image} alt={offer.title} className="offer-img" />
+                  <img 
+                    src={offer.image} 
+                    alt={offer.title} 
+                    className="offer-img" 
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/photos/cheese-splash-monster-transparent.png';
+                    }}
+                  />
                 </div>
 
                 {/* Info */}

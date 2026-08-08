@@ -1,9 +1,8 @@
 import { Burger } from '../core/entities/Burger';
 
 export const INITIAL_BURGERS = [
-  // --- NEW USER TRANSPARENT SELECTION (5 NEW ITEMS) ---
   new Burger({
-    id: 'burger-new-1',
+    id: 'burger-1',
     name: 'Double Flame Angus Splash',
     tagline: 'New Special',
     description: 'Double flame-grilled Angus patties layered with melted cheddar cheese, crispy bacon, pickles, red onions, fresh lettuce, and signature splash sauce.',
@@ -16,7 +15,7 @@ export const INITIAL_BURGERS = [
     isPopular: true
   }),
   new Burger({
-    id: 'burger-new-2',
+    id: 'burger-2',
     name: 'Crispy Fried Chicken Splash',
     tagline: 'New Favorite',
     description: 'Golden double buttermilk fried chicken breast overflowing with melting cheese splash, crunchy pickles, juicy tomatoes, and zesty mayo.',
@@ -29,7 +28,7 @@ export const INITIAL_BURGERS = [
     isPopular: true
   }),
   new Burger({
-    id: 'burger-new-3',
+    id: 'burger-3',
     name: 'Smokey BBQ Bacon & Rings',
     tagline: 'Hot & Spicy',
     description: 'Flame-grilled prime Angus patty topped with beer-battered onion rings, flying hickory smoked bacon, melted Swiss, and smoky BBQ sauce.',
@@ -42,7 +41,7 @@ export const INITIAL_BURGERS = [
     isPopular: true
   }),
   new Burger({
-    id: 'burger-new-4',
+    id: 'burger-4',
     name: 'Avocado Chicken Deluxe',
     tagline: 'Fresh Choice',
     description: 'Grilled seasoned chicken breast topped with fresh sliced avocado, crispy bacon, microgreens, tomatoes, red onions, and house aioli.',
@@ -55,8 +54,8 @@ export const INITIAL_BURGERS = [
     isPopular: true
   }),
   new Burger({
-    id: 'burger-new-5',
-    name: 'Double BBQ Bacon Splash',
+    id: 'burger-5',
+    name: 'BBQ Bacon Splash',
     tagline: 'Gourmet Special',
     description: 'Juicy Angus patty topped with thick-cut crispy bacon weaves, rich barbecue glaze, melted cheddar, lettuce, and tomatoes on an artisan brioche bun.',
     price: 13.50,
@@ -68,9 +67,8 @@ export const INITIAL_BURGERS = [
     isPopular: false
   }),
 
-  // --- ORIGINAL CLASSIC SELECTION ---
   new Burger({
-    id: 'burger-splash-1',
+    id: 'burger-6',
     name: 'The Cheese Splash Monster',
     tagline: 'Splash Special',
     description: 'Ultra-juicy double beef patties dripping in explosive melted cheese splash, fresh garden lettuce, red onion rings, pickled tomatoes on a toasted sesame bun.',
@@ -78,12 +76,12 @@ export const INITIAL_BURGERS = [
     spiceLevel: 3,
     ingredients: ['Double Angus Beef', 'Explosive Cheese Splash', 'Red Onion Rings', 'Garden Lettuce', 'Toasted Sesame Bun'],
     nutrition: { calories: '890 kcal', fat: '44g', protein: '48g', carbs: '52g' },
-    image: '/enhancedBurgerPhoto/BeffBurger.png',
+    image: '/enhancedBurgerPhoto/single-exta-cheese-burger.png',
     category: 'Beef',
     isPopular: true
   }),
   new Burger({
-    id: 'burger-splash-2',
+    id: 'burger-7',
     name: 'Double Bacon Splash',
     tagline: 'Trending Deal',
     description: 'Double flame-grilled Angus patties layered with crispy hickory smoked bacon weaves, dripping cheddar cheese, and smoky BBQ aioli.',
@@ -91,12 +89,12 @@ export const INITIAL_BURGERS = [
     spiceLevel: 2,
     ingredients: ['Double Angus Patties', 'Crispy Bacon Weaves', 'Melted Cheddar', 'Smoky BBQ Aioli', 'Brioche Bun'],
     nutrition: { calories: '860 kcal', fat: '42g', protein: '45g', carbs: '49g' },
-    image: '/enhancedBurgerPhoto/Beef With inon rings .png',
+    image: '/enhancedBurgerPhoto/double-angus-bacon-cheeseburger.png',
     category: 'Beef',
     isPopular: true
   }),
   new Burger({
-    id: 'burger-splash-3',
+    id: 'burger-8',
     name: 'Melted Cheese Drip Monster',
     tagline: 'Chef Favorite',
     description: 'Overloaded overflowing melted cheese waterfall over double flame-grilled patties, fresh microgreens, pickled red onions, and house relish.',
@@ -109,7 +107,7 @@ export const INITIAL_BURGERS = [
     isPopular: true
   }),
   new Burger({
-    id: 'burger-1',
+    id: 'burger-9',
     name: 'The Double Decker Classic',
     tagline: 'Classic',
     description: 'Double juicy grass-fed beef patty with melted cheddar, crisp lettuce, secret house sauce on a freshly baked toasted brioche bun.',
@@ -122,7 +120,7 @@ export const INITIAL_BURGERS = [
     isPopular: false
   }),
   new Burger({
-    id: 'burger-2',
+    id: 'burger-10',
     name: 'Crispy Zesty Chicken Classic',
     tagline: 'Classic Choice',
     description: 'Ultra crispy buttermilk fried chicken breast topped with creamy chipotle slaw, crunchy pickles, and zesty mayo.',
@@ -135,7 +133,7 @@ export const INITIAL_BURGERS = [
     isPopular: false
   }),
   new Burger({
-    id: 'burger-3',
+    id: 'burger-11',
     name: 'Smokey BBQ Bacon Classic',
     tagline: 'Classic BBQ',
     description: 'Flame-grilled Angus patty layered with crispy hickory smoked bacon, onion rings, tangy BBQ drizzle, and double pepper jack cheese.',
@@ -148,7 +146,7 @@ export const INITIAL_BURGERS = [
     isPopular: false
   }),
   new Burger({
-    id: 'burger-4',
+    id: 'burger-12',
     name: 'Garden Avocado Veggie',
     tagline: 'Healthy Option',
     description: 'Handcrafted plant-based quinoa & black bean patty, sliced fresh avocado, organic microgreens, vegan aioli on a whole grain bun.',
@@ -160,58 +158,31 @@ export const INITIAL_BURGERS = [
     category: 'Veggie',
     isPopular: false
   }),
-
-  // --- DRINKS ---
+    new Burger({ 
+        id: 'burger-13',
+        name: 'Triple Smash With Mashrooms',
+        tagline: '',
+        description: 'Triple smash burger with thin crispy-edged patties, melted cheese, and mushrooms',
+        price: 16.99,
+        spiceLevel: 2,
+        ingredients: ['Triple Smash Patties', 'Melted Cheese', 'Sautéed Mushrooms', 'Caramelized Onions', 'Toasted Brioche Bun'], 
+        nutrition: { calories: '950 kcal', fat: '50g', protein: '55g', carbs: '60g' },
+        image: '/enhancedBurgerPhoto/burger-triple-smash-transparent.png',
+        category: 'Beef',
+        isPopular: true
+    }),
   new Burger({
-    id: 'drink-1',
-    name: 'Classic Ice Cold Cola',
-    tagline: 'Refreshment',
-    description: 'Vintage ice-cold fountain Coca-Cola served in a chilled glass with crushed ice and fresh lemon zest.',
-    price: 3.50,
-    spiceLevel: 1,
-    ingredients: ['Classic Cola', 'Crushed Ice', 'Lemon Slice'],
-    nutrition: { calories: '150 kcal', fat: '0g', protein: '0g', carbs: '38g' },
-    image: '/photos/cola-isolated-transparent.png',
-    category: 'Drinks',
+    id: 'burger-14',
+    name: 'Jalapeño Spicy Smash',
+    tagline: 'Fiery & Crispy',
+    description: 'Double flame-grilled patties topped with spicy pickled jalapeños, melted pepper jack cheese, crispy onion strings, and fiery chipotle aioli.',
+    price: 15.49,
+    spiceLevel: 5,
+    ingredients: ['Double Smash Patties', 'Pepper Jack Cheese', 'Pickled Jalapeños', 'Crispy Onion Strings', 'Chipotle Aioli'],
+    nutrition: { calories: '880 kcal', fat: '44g', protein: '49g', carbs: '51g' },
+    image: '/enhancedBurgerPhoto/jalapeno-smash-isolated-transparent.png',
+    category: 'Beef',
     isPopular: true
-  }),
-  new Burger({
-    id: 'drink-2',
-    name: 'Craft Strawberry Milkshake',
-    tagline: 'Sweet Treat',
-    description: 'Hand-spun artisanal strawberry ice cream shake topped with fresh whipped cream and a cherry.',
-    price: 5.50,
-    spiceLevel: 1,
-    ingredients: ['Organic Strawberries', 'Whole Milk Ice Cream', 'Whipped Cream', 'Maraschino Cherry'],
-    nutrition: { calories: '420 kcal', fat: '16g', protein: '0g', carbs: '58g' },
-    image: '/photos/milkshake-isolated-transparent.png',
-    category: 'Drinks',
-    isPopular: true
-  }),
-  new Burger({
-    id: 'drink-3',
-    name: 'Sparkling Citrus Lemonade',
-    tagline: 'Fresh Squeezed',
-    description: 'Hand-pressed Meyer lemons blended with cane sugar syrup, sparkling soda water, and fresh mint leaves.',
-    price: 4.25,
-    spiceLevel: 1,
-    ingredients: ['Fresh Meyer Lemon', 'Mint Leaves', 'Sparkling Soda Water', 'Cane Sugar'],
-    nutrition: { calories: '120 kcal', fat: '0g', protein: '0g', carbs: '30g' },
-    image: '/photos/lemonade-isolated-transparent.png',
-    category: 'Drinks',
-    isPopular: false
-  }),
-  new Burger({
-    id: 'drink-4',
-    name: 'Iced Vanilla Bean Latte',
-    tagline: 'Espresso Bar',
-    description: 'Double shot of artisan espresso poured over cold whole milk, Madagascar vanilla syrup, and crystal ice.',
-    price: 4.99,
-    spiceLevel: 1,
-    ingredients: ['Artisan Espresso', 'Madagascar Vanilla', 'Whole Milk', 'Crystal Ice'],
-    nutrition: { calories: '180 kcal', fat: '5g', protein: '6g', carbs: '26g' },
-    image: '/photos/latte-isolated-transparent.png',
-    category: 'Drinks',
-    isPopular: false
   })
 ];
+
