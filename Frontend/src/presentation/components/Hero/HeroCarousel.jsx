@@ -27,7 +27,7 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
           className="floating-food float-basil"
         />
         <img
-          src="/photos/cola-isolated-transparent.png"
+          src="/enhancedDrinkPhoto/cola-isolated-transparent.png"
           alt="Floating cold drink"
           className="floating-food float-cola"
         />

@@ -10,7 +10,7 @@ export const INITIAL_DRINKS = [
     spiceLevel: 0,
     ingredients: ['Classic Cola', 'Crushed Ice', 'Lemon Slice'],
     nutrition: { calories: '150 kcal', fat: '0g', protein: '0g', carbs: '38g' },
-    image: '/photos/cola-isolated-transparent.png',
+    image: '/enhancedDrinkPhoto/cola-isolated-transparent.png',
     category: 'Drinks',
     isPopular: true
   }),
@@ -49,7 +49,7 @@ export const INITIAL_DRINKS = [
     spiceLevel: 0,
     ingredients: ['Artisan Espresso', 'Madagascar Vanilla', 'Whole Milk', 'Crystal Ice'],
     nutrition: { calories: '180 kcal', fat: '5g', protein: '6g', carbs: '26g' },
-    image: '/photos/latte-isolated-transparent.png',
+    image: '/enhancedDrinkPhoto/latte-isolated.jpg',
     category: 'Drinks',
     isPopular: false
   })
