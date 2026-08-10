@@ -9,7 +9,7 @@ export const OFFERS_DATA = [
     promoCode: 'DOUBLE50',
     dealPrice: 18.75,
     originalPrice: 25.00,
-    image: '/enhancedBurgerPhoto/burger-double-angus-transparent.png',
+    image: '/enhancedBurgerPhoto/burger-double-angus.png',
     burgerId: 'burger-7',
     expiresIn: 'Ends in 4 hours'
   }),
@@ -45,7 +45,7 @@ export const OFFERS_DATA = [
     promoCode: 'FAMILYFIESTA',
     dealPrice: 39.99,
     originalPrice: 56.00,
-    image: '/enhancedBurgerPhoto/burger-double-angus-transparent.png',
+    image: '/enhancedBurgerPhoto/burger-double-angus.png',
     burgerId: 'burger-9',
     expiresIn: 'Weekend Special'
   })

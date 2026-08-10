@@ -10,9 +10,11 @@ export const INITIAL_DRINKS = [
     spiceLevel: 0,
     ingredients: ['Classic Cola', 'Crushed Ice', 'Lemon Slice'],
     nutrition: { calories: '150 kcal', fat: '0g', protein: '0g', carbs: '38g' },
-    image: '/enhancedDrinkPhoto/cola-isolated-transparent.png',
+    image: '/enhancedDrinkPhoto/cola-isolated.png',
     category: 'Drinks',
-    isPopular: true
+    isPopular: true,
+    showInHero: false,
+    showInMenu: true
   }),
   new Drinks({
     id: 'drink-2',
@@ -23,9 +25,11 @@ export const INITIAL_DRINKS = [
     spiceLevel: 0,
     ingredients: ['Organic Strawberries', 'Whole Milk Ice Cream', 'Whipped Cream', 'Maraschino Cherry'],
     nutrition: { calories: '420 kcal', fat: '16g', protein: '0g', carbs: '58g' },
-    image: '/photos/milkshake-isolated-transparent.png',
+    image: '/enhancedDrinkPhoto/milkshake-isolated.png',
     category: 'Drinks',
-    isPopular: true
+    isPopular: true,
+    showInHero: false,
+    showInMenu: true
   }),
   new Drinks({
     id: 'drink-3',
@@ -36,9 +40,11 @@ export const INITIAL_DRINKS = [
     spiceLevel: 0,
     ingredients: ['Fresh Meyer Lemon', 'Mint Leaves', 'Sparkling Soda Water', 'Cane Sugar'],
     nutrition: { calories: '120 kcal', fat: '0g', protein: '0g', carbs: '30g' },
-    image: '/photos/lemonade-isolated-transparent.png',
+    image: '/enhancedDrinkPhoto/lemonade-isolated.png',
     category: 'Drinks',
-    isPopular: false
+    isPopular: false,
+    showInHero: false,
+    showInMenu: true
   }),
   new Drinks({
     id: 'drink-4',
@@ -49,8 +55,10 @@ export const INITIAL_DRINKS = [
     spiceLevel: 0,
     ingredients: ['Artisan Espresso', 'Madagascar Vanilla', 'Whole Milk', 'Crystal Ice'],
     nutrition: { calories: '180 kcal', fat: '5g', protein: '6g', carbs: '26g' },
-    image: '/enhancedDrinkPhoto/latte-isolated.jpg',
+    image: '/enhancedDrinkPhoto/latte-isolated.png',
     category: 'Drinks',
-    isPopular: false
+    isPopular: false,
+    showInHero: false,
+    showInMenu: true
   })
 ];

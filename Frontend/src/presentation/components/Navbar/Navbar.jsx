@@ -4,16 +4,20 @@ import { useCart } from '../../context/CartContext';
 import { LOCATIONS_DATA } from '../../../data/locationsData';
 import './Navbar.css';
 
-export const Navbar = () => {
+export const Navbar = ({ activeTab = 'home', setActiveTab }) => {
   const { totalCount, setIsCartOpen } = useCart();
   const [selectedLocation, setSelectedLocation] = useState(LOCATIONS_DATA[0]);
   const [isCityDropdownOpen, setIsCityDropdownOpen] = useState(false);
+
+  const handleNavClick = (tab, href) => {
+    if (setActiveTab) setActiveTab(tab);
+  };
 
   return (
     <header className="navbar-header">
       <div className="navbar-container glass-panel">
         {/* Brand / Logo */}
-        <div className="navbar-logo">
+        <div className="navbar-logo" onClick={() => handleNavClick('home', '#hero')} style={{ cursor: 'pointer' }}>
           <svg
             className="custom-burger-logo-icon"
             width="32"
@@ -42,9 +46,34 @@ export const Navbar = () => {
 
         {/* Links */}
         <nav className="navbar-links">
-          <a href="#hero" className="nav-link active">Home</a>
-          <a href="#menu" className="nav-link">Shop Menu</a>
-          <a href="#offers" className="nav-link">Special Offers</a>
+          <a
+            href="#hero"
+            className={`nav-link ${activeTab === 'home' ? 'active' : ''}`}
+            onClick={() => handleNavClick('home', '#hero')}
+          >
+            Home
+          </a>
+          <a
+            href="#menu"
+            className={`nav-link ${activeTab === 'menu' ? 'active' : ''}`}
+            onClick={() => handleNavClick('menu', '#menu')}
+          >
+            Menu
+          </a>
+          <a
+            href="#offers"
+            className={`nav-link ${activeTab === 'offers' ? 'active' : ''}`}
+            onClick={() => handleNavClick('offers', '#offers')}
+          >
+            Offers
+          </a>
+          <a
+            href="#contact"
+            className={`nav-link ${activeTab === 'contact' ? 'active' : ''}`}
+            onClick={() => handleNavClick('contact', '#contact')}
+          >
+            Contact Us
+          </a>
         </nav>
 
         {/* Action Buttons */}

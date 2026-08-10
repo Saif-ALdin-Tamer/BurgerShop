@@ -10,9 +10,11 @@ export const INITIAL_BURGERS = [
     spiceLevel: 3,
     ingredients: ['Double Angus Patties', 'Aged Cheddar', 'Crispy Bacon', 'Pickles & Red Onions', 'Sesame Bun'],
     nutrition: { calories: '890 kcal', fat: '44g', protein: '48g', carbs: '52g' },
-    image: '/enhancedBurgerPhoto/burger-double-angus-transparent.png',
+    image: '/enhancedBurgerPhoto/burger-double-angus.png',
     category: 'Beef',
-    isPopular: true
+    isPopular: true,
+    showInHero: true,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-2',
@@ -25,7 +27,9 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '760 kcal', fat: '34g', protein: '42g', carbs: '54g' },
     image: '/enhancedBurgerPhoto/burger-crispy-chicken-transparent.png',
     category: 'Chicken',
-    isPopular: true
+    isPopular: true,
+    showInHero: true,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-3',
@@ -38,7 +42,9 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '910 kcal', fat: '46g', protein: '50g', carbs: '58g' },
     image: '/enhancedBurgerPhoto/burger-bbq-bacon-transparent.png',
     category: 'Beef',
-    isPopular: true
+    isPopular: true,
+    showInHero: true,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-4',
@@ -51,7 +57,9 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '680 kcal', fat: '28g', protein: '44g', carbs: '46g' },
     image: '/enhancedBurgerPhoto/burger-avocado-chicken-transparent.png',
     category: 'Chicken',
-    isPopular: true
+    isPopular: true,
+    showInHero: false,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-5',
@@ -64,9 +72,10 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '840 kcal', fat: '40g', protein: '46g', carbs: '48g' },
     image: '/enhancedBurgerPhoto/burger-double-flame-bbq-transparent.png',
     category: 'Beef',
-    isPopular: false
+    isPopular: false,
+    showInHero: false,
+    showInMenu: true
   }),
-
   new Burger({
     id: 'burger-6',
     name: 'The Cheese Splash Monster',
@@ -78,7 +87,9 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '890 kcal', fat: '44g', protein: '48g', carbs: '52g' },
     image: '/enhancedBurgerPhoto/single-exta-cheese-burger.png',
     category: 'Beef',
-    isPopular: true
+    isPopular: true,
+    showInHero: true,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-7',
@@ -91,7 +102,9 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '860 kcal', fat: '42g', protein: '45g', carbs: '49g' },
     image: '/enhancedBurgerPhoto/double-angus-bacon-cheeseburger.png',
     category: 'Beef',
-    isPopular: true
+    isPopular: true,
+    showInHero: false,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-8',
@@ -104,7 +117,9 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '820 kcal', fat: '40g', protein: '46g', carbs: '48g' },
     image: '/enhancedBurgerPhoto/melted-cheese-drip-transparent.png',
     category: 'Beef',
-    isPopular: true
+    isPopular: true,
+    showInHero: false,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-9',
@@ -115,9 +130,11 @@ export const INITIAL_BURGERS = [
     spiceLevel: 3,
     ingredients: ['100% Angus Beef', 'Double Aged Cheddar', 'Pickled Jalapeños', 'Secret Sauce', 'Artisan Brioche'],
     nutrition: { calories: '780 kcal', fat: '34g', protein: '45g', carbs: '48g' },
-    image: '/photos/cheeseburger-transparent.png',
+    image: '/enhancedBurgerPhoto/extra-cheese-burger.png',
     category: 'Beef',
-    isPopular: false
+    isPopular: false,
+    showInHero: false,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-10',
@@ -128,9 +145,11 @@ export const INITIAL_BURGERS = [
     spiceLevel: 2,
     ingredients: ['Buttermilk Chicken', 'Chipotle Slaw', 'Smoky Aioli', 'Dill Pickles', 'Sesame Bun'],
     nutrition: { calories: '650 kcal', fat: '28g', protein: '38g', carbs: '52g' },
-    image: '/photos/chicken-burger-isolated-transparent.png',
+    image: '/enhancedBurgerPhoto/burger-crispy-chicken-transparent.png',
     category: 'Chicken',
-    isPopular: false
+    isPopular: false,
+    showInHero: false,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-11',
@@ -141,9 +160,11 @@ export const INITIAL_BURGERS = [
     spiceLevel: 4,
     ingredients: ['Prime Angus Patty', 'Hickory Bacon', 'Beer-Battered Onion Rings', 'Smoky BBQ Sauce', 'Pepper Jack'],
     nutrition: { calories: '890 kcal', fat: '42g', protein: '48g', carbs: '58g' },
-    image: '/photos/bbq-bacon-isolated-transparent.png',
+    image: '/enhancedBurgerPhoto/bbq-bacon-isolated-transparen.png',
     category: 'Beef',
-    isPopular: false
+    isPopular: false,
+    showInHero: false,
+    showInMenu: true
   }),
   new Burger({
     id: 'burger-12',
@@ -156,21 +177,25 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '520 kcal', fat: '18g', protein: '22g', carbs: '62g' },
     image: '/enhancedBurgerPhoto/burger-avocado-chicken-transparent.png',
     category: 'Veggie',
-    isPopular: false
+    isPopular: false,
+    showInHero: false,
+    showInMenu: true
   }),
-    new Burger({ 
-        id: 'burger-13',
-        name: 'Triple Smash With Mashrooms',
-        tagline: '',
-        description: 'Triple smash burger with thin crispy-edged patties, melted cheese, and mushrooms',
-        price: 16.99,
-        spiceLevel: 2,
-        ingredients: ['Triple Smash Patties', 'Melted Cheese', 'Sautéed Mushrooms', 'Caramelized Onions', 'Toasted Brioche Bun'], 
-        nutrition: { calories: '950 kcal', fat: '50g', protein: '55g', carbs: '60g' },
-        image: '/enhancedBurgerPhoto/burger-triple-smash-transparent.png',
-        category: 'Beef',
-        isPopular: true
-    }),
+  new Burger({ 
+    id: 'burger-13',
+    name: 'Triple Smash With Mashrooms',
+    tagline: 'Triple Special',
+    description: 'Triple smash burger with thin crispy-edged patties, melted cheese, and mushrooms',
+    price: 16.99,
+    spiceLevel: 2,
+    ingredients: ['Triple Smash Patties', 'Melted Cheese', 'Sautéed Mushrooms', 'Caramelized Onions', 'Toasted Brioche Bun'], 
+    nutrition: { calories: '950 kcal', fat: '50g', protein: '55g', carbs: '60g' },
+    image: '/enhancedBurgerPhoto/burger-triple-smash-transparent.png',
+    category: 'Beef',
+    isPopular: true,
+    showInHero: false,
+    showInMenu: true
+  }),
   new Burger({
     id: 'burger-14',
     name: 'Jalapeño Spicy Smash',
@@ -182,7 +207,8 @@ export const INITIAL_BURGERS = [
     nutrition: { calories: '880 kcal', fat: '44g', protein: '49g', carbs: '51g' },
     image: '/enhancedBurgerPhoto/jalapeno-smash-isolated-transparent.png',
     category: 'Beef',
-    isPopular: true
+    isPopular: true,
+    showInHero: false,
+    showInMenu: true
   })
 ];
-

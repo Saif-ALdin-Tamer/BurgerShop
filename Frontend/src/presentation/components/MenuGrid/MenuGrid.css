@@ -101,11 +101,14 @@
   background: radial-gradient(circle at center, rgba(255, 85, 0, 0.1) 0%, transparent 70%);
   cursor: pointer;
   overflow: hidden;
+  padding: 16px;
 }
 
 .card-image {
   max-height: 180px;
+  max-width: 90%;
   width: auto;
+  height: auto;
   object-fit: contain;
   transition: var(--transition-smooth);
 }

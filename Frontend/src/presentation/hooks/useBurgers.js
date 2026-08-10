@@ -33,26 +33,44 @@ export const useBurgers = () => {
     };
   }, []);
 
+  const heroBurgers = useMemo(() => {
+    const featured = burgers.filter((b) => b.showInHero);
+    return featured.length > 0 ? featured : burgers.filter((b) => b.isPopular).slice(0, 5);
+  }, [burgers]);
+
   const filteredBurgers = useMemo(() => {
-    if (activeCategory === 'All') return burgers;
-    return burgers.filter((b) => b.category.toLowerCase() === activeCategory.toLowerCase());
+    const menuItems = burgers.filter((b) => b.showInMenu !== false);
+    if (activeCategory === 'All') return menuItems;
+    return menuItems.filter((b) => b.category.toLowerCase() === activeCategory.toLowerCase());
   }, [burgers, activeCategory]);
 
   const activeBurger = useMemo(() => {
-    if (burgers.length === 0) return null;
-    return burgers[activeIndex % burgers.length];
-  }, [burgers, activeIndex]);
+    if (heroBurgers.length === 0) return null;
+    return heroBurgers[activeIndex % heroBurgers.length];
+  }, [heroBurgers, activeIndex]);
 
   const nextBurger = () => {
-    setActiveIndex((prev) => (prev + 1) % burgers.length);
+    if (heroBurgers.length === 0) return;
+    setActiveIndex((prev) => (prev + 1) % heroBurgers.length);
   };
 
   const prevBurger = () => {
-    setActiveIndex((prev) => (prev - 1 + burgers.length) % burgers.length);
+    if (heroBurgers.length === 0) return;
+    setActiveIndex((prev) => (prev - 1 + heroBurgers.length) % heroBurgers.length);
   };
+
+  const categories = useMemo(() => {
+    const set = new Set();
+    burgers.forEach((b) => {
+      if (b.category) set.add(b.category);
+    });
+    return ['All', ...Array.from(set)];
+  }, [burgers]);
 
   return {
     burgers,
+    heroBurgers,
+    categories,
     filteredBurgers,
     activeBurger,
     activeIndex,

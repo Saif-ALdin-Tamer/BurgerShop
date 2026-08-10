@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CartProvider } from './presentation/context/CartContext';
 import { useBurgers } from './presentation/hooks/useBurgers';
 import { Navbar } from './presentation/components/Navbar/Navbar';
 import { HeroCarousel } from './presentation/components/Hero/HeroCarousel';
 import { MenuGrid } from './presentation/components/MenuGrid/MenuGrid';
 import { Offers } from './presentation/components/Offers/Offers';
+import { ContactUs } from './presentation/components/ContactUs/ContactUs';
 import { CartDrawer } from './presentation/components/Cart/CartDrawer';
 import { OrderModal } from './presentation/components/OrderModal/OrderModal';
 import './presentation/styles/index.css';
 
 const MainAppContent = () => {
+  const [activeTab, setActiveTab] = useState('home');
+
   const {
     burgers,
+    heroBurgers,
+    categories,
     filteredBurgers,
     activeBurger,
     activeIndex,
@@ -24,25 +29,34 @@ const MainAppContent = () => {
 
   return (
     <div className="app-container">
-      <Navbar />
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <main>
-        <HeroCarousel
-          burgers={burgers}
-          activeBurger={activeBurger}
-          activeIndex={activeIndex}
-          nextBurger={nextBurger}
-          prevBurger={prevBurger}
-          setActiveIndex={setActiveIndex}
-        />
+        {activeTab === 'contact' ? (
+          <ContactUs onNavigateHome={() => setActiveTab('home')} />
+        ) : (
+          <>
+            <HeroCarousel
+              burgers={heroBurgers}
+              activeBurger={activeBurger}
+              activeIndex={activeIndex}
+              nextBurger={nextBurger}
+              prevBurger={prevBurger}
+              setActiveIndex={setActiveIndex}
+            />
 
-        <MenuGrid
-          filteredBurgers={filteredBurgers}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-        />
+            <MenuGrid
+              filteredBurgers={filteredBurgers}
+              categories={categories}
+              activeCategory={activeCategory}
+              setActiveCategory={setActiveCategory}
+            />
 
-        <Offers />
+            <Offers />
+
+            <ContactUs onNavigateHome={() => setActiveTab('home')} />
+          </>
+        )}
       </main>
 
       {/* Slide-out Cart Drawer */}

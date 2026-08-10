@@ -27,12 +27,12 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
           className="floating-food float-basil"
         />
         <img
-          src="/enhancedDrinkPhoto/cola-isolated-transparent.png"
+          src="/enhancedDrinkPhoto/cola-isolated.png"
           alt="Floating cold drink"
           className="floating-food float-cola"
         />
         <img
-          src="/photos/fries-transparent.png"
+          src="/photos/french-fries-side.png"
           alt="Floating side dish"
           className="floating-food float-fries"
         />
@@ -93,8 +93,14 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
           {/* Pricing & Call to Action */}
           <div className="cta-row">
             <div className="price-tag">
-              <span className="currency">$</span>
-              <span className="price-amount">{activeBurger.price.toFixed(2)}</span>
+              {activeBurger.priceDisplay ? (
+                <span className="price-amount">{activeBurger.priceDisplay}</span>
+              ) : (
+                <>
+                  <span className="currency">$</span>
+                  <span className="price-amount">{activeBurger.price.toFixed(2)}</span>
+                </>
+              )}
             </div>
 
             <div className="cta-buttons">

@@ -3,9 +3,9 @@ import { ShoppingBag, Star, Eye } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import './MenuGrid.css';
 
-export const MenuGrid = ({ filteredBurgers, activeCategory, setActiveCategory }) => {
+export const MenuGrid = ({ filteredBurgers, categories: passedCategories, activeCategory, setActiveCategory }) => {
   const { addToCart, setSelectedBurgerForModal } = useCart();
-  const categories = ['All', 'Beef', 'Chicken', 'Veggie', 'Drinks'];
+  const categories = passedCategories || ['All', 'Smash Burgers', 'Beef', 'Chicken', 'Veggie', 'For Sharing', 'Sides', 'Dips / Sauces', 'Drinks'];
 
   return (
     <section className="menu-section" id="menu">
@@ -71,8 +71,8 @@ export const MenuGrid = ({ filteredBurgers, activeCategory, setActiveCategory })
                 </h3>
                 <p className="card-desc">{item.description}</p>
 
-                {/* Spice Level Row (for burgers) */}
-                {item.category !== 'Drinks' && (
+                {/* Spice Level Row (for items with spiceLevel > 0) */}
+                {item.spiceLevel > 0 && (
                   <div className="card-spice-row">
                     <span className="card-spice-text">Heat:</span>
                     <div className="card-peppers">
@@ -90,7 +90,9 @@ export const MenuGrid = ({ filteredBurgers, activeCategory, setActiveCategory })
 
                 {/* Footer: Price & Add to Cart */}
                 <div className="card-footer">
-                  <div className="card-price">${item.price.toFixed(2)}</div>
+                  <div className="card-price">
+                    {item.priceDisplay || (item.getFormattedPrice ? item.getFormattedPrice() : `$${item.price.toFixed(2)}`)}
+                  </div>
                   <button
                     className="card-add-btn"
                     onClick={() => addToCart(item, 1)}

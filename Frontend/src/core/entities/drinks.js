@@ -11,6 +11,8 @@ export class Drinks {
         image,
         category = 'Drinks',
         isPopular = false,
+        showInHero = false,
+        showInMenu = true,
     }) {
 
         this.id = id;
@@ -24,6 +26,8 @@ export class Drinks {
         this.image = image;
         this.category = category;
         this.isPopular = isPopular;
+        this.showInHero = showInHero;
+        this.showInMenu = showInMenu;
     }
     getFormattedPrice() {
         return `$${this.price.toFixed(2)}`;
