@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { X, Trash2, Plus, Minus, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { X, Trash2, Plus, Minus, ArrowRight, CheckCircle2, AlertTriangle } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
+import { createCheckoutSession } from '../../../data/api/paymentApi';
 import './CartDrawer.css';
 
 export const CartDrawer = () => {
@@ -16,15 +17,22 @@ export const CartDrawer = () => {
 
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
+  const [checkoutError, setCheckoutError] = useState(null);
 
   if (!isCartOpen) return null;
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     setIsCheckingOut(true);
-    setTimeout(() => {
+    setCheckoutError(null);
+    try {
+      const response = await createCheckoutSession(cartItems);
+      if (response.data.url) {
+        window.location.href = response.data.url;
+      }
+    } catch (error) {
+      setCheckoutError(error.response?.data?.message || error.message || 'Checkout failed. Please try again.');
       setIsCheckingOut(false);
-      setOrderComplete(true);
-    }, 1500);
+    }
   };
 
   const handleClose = () => {
@@ -206,6 +214,13 @@ export const CartDrawer = () => {
                 <span>Total Amount</span>
                 <span className="total-val">${totals.total.toFixed(2)}</span>
               </div>
+
+              {checkoutError && (
+                <div className="checkout-error">
+                  <AlertTriangle size={16} />
+                  <span>{checkoutError}</span>
+                </div>
+              )}
 
               <button
                 className="checkout-btn"
