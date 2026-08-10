@@ -1,4 +1,4 @@
-import { Drinks } from '../core/entities/Drinks';
+import { Drinks } from '../core/entities/drinks';
 
 export const INITIAL_DRINKS = [
   new Drinks({
