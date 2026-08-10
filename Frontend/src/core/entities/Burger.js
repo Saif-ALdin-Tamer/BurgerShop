@@ -1,7 +1,3 @@
-/**
- * Core Domain Entity: Burger
- * Represents a menu item with metadata, pricing, spice level, ingredients, and nutrition details.
- */
 export class Burger {
   constructor({
     id,
@@ -10,7 +6,7 @@ export class Burger {
     description,
     price,
     priceDisplay,
-    spiceLevel = 1, // 1 to 4 hot peppers
+    spiceLevel = 1,
     ingredients = [],
     nutrition = { calories: '0', fat: '0g', protein: '0g', carbs: '0g' },
     image,

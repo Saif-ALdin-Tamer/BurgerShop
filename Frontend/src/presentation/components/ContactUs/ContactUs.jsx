@@ -45,9 +45,7 @@ export const ContactUs = ({ onNavigateHome }) => {
   return (
     <section className="contact-page-section" id="contact">
       <div className="contact-container">
-        {/* Main Content Layout */}
         <div className="contact-grid">
-          {/* Left Column: Contact Info & Form */}
           <div className="contact-form-col">
             <div className="brand-header">
               <h2 className="brand-title">Burger Craft & Co.</h2>
@@ -63,7 +61,6 @@ export const ContactUs = ({ onNavigateHome }) => {
               </p>
             </div>
 
-            {/* Form Success Message */}
             {isSubmitted && (
               <div className="form-success-banner glass-panel">
                 <CheckCircle2 size={24} className="success-icon" />
@@ -74,7 +71,6 @@ export const ContactUs = ({ onNavigateHome }) => {
               </div>
             )}
 
-            {/* Form */}
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-row">
                 <div className="form-group">
@@ -176,14 +172,12 @@ export const ContactUs = ({ onNavigateHome }) => {
             </form>
           </div>
 
-          {/* Right Column: Dialer Promo Card */}
           <div className="contact-promo-col">
             <div className="promo-card glass-panel">
               <div className="promo-header">
                 <span className="promo-tagline">Happiness In Every Bite!</span>
               </div>
               
-              {/* Phone Graphic Representation */}
               <div className="dialer-graphic-card">
                 <div className="dialer-brand">
                   <span className="dialer-title">BURGER CRAFT & CO.</span>
@@ -213,7 +207,6 @@ export const ContactUs = ({ onNavigateHome }) => {
           </div>
         </div>
 
-        {/* Branch Locations List */}
         <div className="branches-section">
           <h3 className="branches-title">Our Branches & Locations</h3>
           <div className="branches-grid">
@@ -273,7 +266,6 @@ export const ContactUs = ({ onNavigateHome }) => {
           </div>
         </div>
 
-        {/* Big Call Us Hotline Callout */}
         <div className="hotline-banner glass-panel">
           <div className="hotline-icon-wrap">
             <Phone size={36} className="hotline-icon" />

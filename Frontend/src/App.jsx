@@ -59,13 +59,10 @@ const MainAppContent = () => {
         )}
       </main>
 
-      {/* Slide-out Cart Drawer */}
       <CartDrawer />
 
-      {/* Burger Details & Customization Modal */}
       <OrderModal />
 
-      {/* Footer */}
       <footer style={{
         textAlign: 'center',
         padding: '36px 20px',

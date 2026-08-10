@@ -1,6 +1,3 @@
-/**
- * Core Domain Use Cases for Burger operations
- */
 export class BurgerUseCases {
   constructor(burgerRepository) {
     this.burgerRepository = burgerRepository;

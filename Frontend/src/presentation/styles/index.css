@@ -29,8 +29,8 @@
 }
 
 html {
-  font-size: 17px; /* Increased scale base */
-  zoom: 1.12; /* Zoom in 2 degrees */
+  font-size: 17px;
+  zoom: 1.12;
 }
 
 body {
@@ -66,7 +66,6 @@ a {
   text-decoration: none;
 }
 
-/* Amber Terminal Scrollbar */
 ::-webkit-scrollbar {
   width: 9px;
 }
@@ -82,7 +81,6 @@ a {
   box-shadow: 0 0 12px var(--primary);
 }
 
-/* Glassmorphism Panels */
 .glass-panel {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
@@ -92,7 +90,6 @@ a {
   box-shadow: 0 14px 36px 0 rgba(0, 0, 0, 0.65);
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }

@@ -1,7 +1,3 @@
-/**
- * Core Domain Entity: Offer
- * Represents special promotional sandwich deals, combo offers, and discount codes.
- */
 export class Offer {
   constructor({
     id,

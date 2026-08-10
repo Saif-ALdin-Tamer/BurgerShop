@@ -34,7 +34,6 @@ export const OrderModal = () => {
         </button>
 
         <div className="modal-body">
-          {/* Burger Image Stage */}
           <div className="modal-img-stage">
             <img 
               src={burger.image} 
@@ -47,7 +46,6 @@ export const OrderModal = () => {
             />
           </div>
 
-          {/* Details & Customizations */}
           <div className="modal-info">
             <div className="modal-header-meta">
               <span className="modal-tag">{burger.tagline}</span>
@@ -57,7 +55,6 @@ export const OrderModal = () => {
             <h2 className="modal-title">{burger.name}</h2>
             <p className="modal-desc">{burger.description}</p>
 
-            {/* Customize Options */}
             <div className="modal-custom-section">
               <h4 className="custom-title">Customizations</h4>
               <div className="custom-options">
@@ -89,7 +86,6 @@ export const OrderModal = () => {
               </div>
             </div>
 
-            {/* Footer Row */}
             <div className="modal-footer-row">
               <div className="quantity-selector">
                 <button className="qty-btn" onClick={() => setQuantity(Math.max(1, quantity - 1))}>

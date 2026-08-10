@@ -19,7 +19,6 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
 
   return (
     <section className="hero-section" id="hero">
-      {/* Floating Ambient Food Elements */}
       <div className="floating-decorations" aria-hidden="true">
         <img
           src="/photos/basil-transparent.png"
@@ -39,7 +38,6 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
       </div>
 
       <div className="hero-container">
-        {/* Left Column: Information & Details */}
         <div className="hero-info-col">
           <div className="badge-tag">
             <span className="badge-dot"></span>
@@ -48,7 +46,6 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
 
           <h1 className="hero-title">{activeBurger.name}</h1>
 
-          {/* Spice Level Peppers Indicator */}
           {activeBurger.category !== 'Drinks' && (
             <div className="spice-indicator-bar">
               <span className="spice-label">Spice Level:</span>
@@ -72,10 +69,8 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
             </div>
           )}
 
-          {/* Description */}
           <p className="hero-description">{activeBurger.description}</p>
 
-          {/* Ingredients Pill Row */}
           <div className="ingredients-wrapper">
             <div className="ingredients-header">
               <Utensils size={14} className="ing-icon" />
@@ -90,7 +85,6 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
             </div>
           </div>
 
-          {/* Pricing & Call to Action */}
           <div className="cta-row">
             <div className="price-tag">
               {activeBurger.priceDisplay ? (
@@ -114,11 +108,9 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
             </div>
           </div>
 
-          {/* Nutrition Badges */}
           <NutritionBadges nutrition={activeBurger.nutrition} />
         </div>
 
-        {/* Right Column: Visual Stage with 3D Depth Stack */}
         <div className="hero-stage-col">
           <div className="burger-stage">
             {burgers.map((b, idx) => {
@@ -150,7 +142,6 @@ export const HeroCarousel = ({ burgers, activeBurger, activeIndex, nextBurger, p
             })}
           </div>
 
-          {/* Controls Arrow Row */}
           <div className="carousel-nav-controls">
             <button className="arrow-btn" onClick={prevBurger} aria-label="Previous Burger">
               <ArrowLeft size={22} />

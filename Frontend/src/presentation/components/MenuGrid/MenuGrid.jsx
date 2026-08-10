@@ -16,7 +16,6 @@ export const MenuGrid = ({ filteredBurgers, categories: passedCategories, active
             <h2 className="section-title">Explore Our Full Menu</h2>
           </div>
 
-          {/* Category Filter Tabs */}
           <div className="category-tabs glass-panel">
             {categories.map((cat) => (
               <button
@@ -30,14 +29,11 @@ export const MenuGrid = ({ filteredBurgers, categories: passedCategories, active
           </div>
         </div>
 
-        {/* Grid of Burger / Drink Cards */}
         <div className="burger-grid">
           {filteredBurgers.map((item) => (
             <div key={item.id} className="burger-card glass-panel">
-              {/* Badge Overlay */}
               {item.isPopular && <div className="popular-badge">★ Popular</div>}
 
-              {/* Image Container */}
               <div className="card-image-wrap" onClick={() => setSelectedBurgerForModal(item)}>
                 <img 
                   src={item.image} 
@@ -56,7 +52,6 @@ export const MenuGrid = ({ filteredBurgers, categories: passedCategories, active
                 </div>
               </div>
 
-              {/* Content */}
               <div className="card-content">
                 <div className="card-meta">
                   <span className="card-category">{item.category}</span>
@@ -71,7 +66,6 @@ export const MenuGrid = ({ filteredBurgers, categories: passedCategories, active
                 </h3>
                 <p className="card-desc">{item.description}</p>
 
-                {/* Spice Level Row (for items with spiceLevel > 0) */}
                 {item.spiceLevel > 0 && (
                   <div className="card-spice-row">
                     <span className="card-spice-text">Heat:</span>
@@ -88,7 +82,6 @@ export const MenuGrid = ({ filteredBurgers, categories: passedCategories, active
                   </div>
                 )}
 
-                {/* Footer: Price & Add to Cart */}
                 <div className="card-footer">
                   <div className="card-price">
                     {item.priceDisplay || (item.getFormattedPrice ? item.getFormattedPrice() : `$${item.price.toFixed(2)}`)}

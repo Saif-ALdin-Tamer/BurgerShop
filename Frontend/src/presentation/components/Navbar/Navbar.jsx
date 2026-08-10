@@ -16,7 +16,6 @@ export const Navbar = ({ activeTab = 'home', setActiveTab }) => {
   return (
     <header className="navbar-header">
       <div className="navbar-container glass-panel">
-        {/* Brand / Logo */}
         <div className="navbar-logo" onClick={() => handleNavClick('home', '#hero')} style={{ cursor: 'pointer' }}>
           <svg
             className="custom-burger-logo-icon"
@@ -29,12 +28,9 @@ export const Navbar = ({ activeTab = 'home', setActiveTab }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            {/* Top Bun Dome */}
             <path d="M4 10C4 6.134 7.134 3 11 3H13C16.866 3 20 6.134 20 10V10.5H4V10Z" />
-            {/* Cheese Line & Triangle Fold */}
             <path d="M3 13.5H21" />
             <path d="M8 13.5L12 17.5L16 13.5" />
-            {/* Bottom Bun */}
             <rect x="3" y="18" width="18" height="3.5" rx="1.75" />
           </svg>
 
@@ -44,7 +40,6 @@ export const Navbar = ({ activeTab = 'home', setActiveTab }) => {
           </div>
         </div>
 
-        {/* Links */}
         <nav className="navbar-links">
           <a
             href="#hero"
@@ -76,9 +71,7 @@ export const Navbar = ({ activeTab = 'home', setActiveTab }) => {
           </a>
         </nav>
 
-        {/* Action Buttons */}
         <div className="navbar-actions">
-          {/* Contact Info & Location */}
           <div className="info-badge">
             <div className="phone-line">
               <Phone size={14} />
@@ -111,7 +104,6 @@ export const Navbar = ({ activeTab = 'home', setActiveTab }) => {
             </div>
           </div>
 
-          {/* Cart Icon Trigger */}
           <button className="cart-trigger-btn" onClick={() => setIsCartOpen(true)}>
             <ShoppingBag size={20} />
             {totalCount > 0 && <span className="cart-badge">{totalCount}</span>}

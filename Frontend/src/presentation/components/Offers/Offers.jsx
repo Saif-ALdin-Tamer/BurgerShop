@@ -23,7 +23,6 @@ export const Offers = () => {
   return (
     <section className="offers-section" id="offers">
       <div className="offers-container">
-        {/* Header */}
         <div className="offers-header">
           <div className="offers-title-wrap">
             <span className="offers-badge">
@@ -37,15 +36,12 @@ export const Offers = () => {
           </div>
         </div>
 
-        {/* Offers Grid */}
         <div className="offers-grid">
           {OFFERS_DATA.map((offer) => (
             <div key={offer.id} className="offer-card glass-panel">
-              {/* Discount Tag */}
               <div className="offer-tag-badge">{offer.badgeText}</div>
 
               <div className="offer-card-body">
-                {/* Image */}
                 <div className="offer-img-wrap">
                   <img 
                     src={offer.image} 
@@ -58,7 +54,6 @@ export const Offers = () => {
                   />
                 </div>
 
-                {/* Info */}
                 <div className="offer-info">
                   <div className="offer-expiry">
                     <Clock size={13} className="clock-icon" />
@@ -68,14 +63,12 @@ export const Offers = () => {
                   <h3 className="offer-card-title">{offer.title}</h3>
                   <p className="offer-desc">{offer.description}</p>
 
-                  {/* Pricing line */}
                   <div className="offer-price-row">
                     <span className="deal-price">${offer.dealPrice.toFixed(2)}</span>
                     <span className="original-price">${offer.originalPrice.toFixed(2)}</span>
                     <span className="savings-pill">Save ${offer.getSavingsAmount()}</span>
                   </div>
 
-                  {/* Promo Code & Action Row */}
                   <div className="offer-action-row">
                     <button
                       className="promo-code-btn"

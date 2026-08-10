@@ -8,7 +8,6 @@
   position: relative;
 }
 
-/* Floating Ambient Food Elements */
 .floating-decorations {
   position: absolute;
   inset: 0;
@@ -262,7 +261,6 @@
   border-color: var(--primary);
 }
 
-/* Stage Column Styles */
 .hero-stage-col {
   display: flex;
   flex-direction: column;

@@ -46,7 +46,6 @@ export const CartDrawer = () => {
   return (
     <div className="cart-backdrop" onClick={handleClose}>
       <div className="cart-drawer glass-panel" onClick={(e) => e.stopPropagation()}>
-        {/* Header with Full-Color Burger Graphic Placeholder */}
         <div className="cart-header">
           <div className="cart-header-title">
             <svg
@@ -89,7 +88,6 @@ export const CartDrawer = () => {
           </button>
         </div>
 
-        {/* Content Body */}
         {orderComplete ? (
           <div className="order-complete-view">
             <CheckCircle2 size={64} className="success-icon" />
@@ -155,7 +153,6 @@ export const CartDrawer = () => {
                     <h4 className="cart-item-name">{item.burger.name}</h4>
                     <span className="cart-item-price">${item.burger.price.toFixed(2)}</span>
 
-                    {/* Customizations Tag */}
                     {(item.options.extraCheese || item.options.doublePatty) && (
                       <div className="item-options-tags">
                         {item.options.extraCheese && <span>+ Extra Cheese</span>}
@@ -163,7 +160,6 @@ export const CartDrawer = () => {
                       </div>
                     )}
 
-                    {/* Quantity Controls */}
                     <div className="qty-controls">
                       <button
                         className="qty-btn"
@@ -195,7 +191,6 @@ export const CartDrawer = () => {
               ))}
             </div>
 
-            {/* Footer Calculation */}
             <div className="cart-footer">
               <div className="summary-line">
                 <span>Subtotal</span>

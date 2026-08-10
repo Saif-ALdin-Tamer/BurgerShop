@@ -1,18 +1,14 @@
-/* ContactUs.css */
-
 .contact-page-section {
   padding-top: 40px;
   padding-bottom: 80px;
 }
 
-/* Container */
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Layout Grid */
 .contact-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -27,7 +23,6 @@
   }
 }
 
-/* Left Form Column */
 .brand-header {
   margin-bottom: 28px;
 }
@@ -69,7 +64,6 @@
   font-weight: 500;
 }
 
-/* Success Banner */
 .form-success-banner {
   display: flex;
   align-items: center;
@@ -93,7 +87,6 @@
   color: #d1fae5;
 }
 
-/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -192,7 +185,6 @@
   background: linear-gradient(135deg, #ff6600, #ff9900);
 }
 
-/* Right Promo Card */
 .promo-card {
   padding: 30px;
   border-radius: 20px;
@@ -286,7 +278,6 @@
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
 }
 
-/* Branch Locations */
 .branches-section {
   margin-bottom: 50px;
 }
@@ -350,7 +341,6 @@
   color: #fb7185;
 }
 
-/* Hotline Banner */
 .hotline-banner {
   display: flex;
   align-items: center;

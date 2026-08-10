@@ -7,7 +7,6 @@ import { INITIAL_DIPS } from './dipsData';
 
 export class BurgerRepositoryImpl {
   async getAllBurgers() {
-    // Simulating async API call behavior returning combined menu items
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve([
